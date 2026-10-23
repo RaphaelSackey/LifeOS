@@ -17,7 +17,7 @@ export default function Sidebar() {
 	];
 
 	return (
-		<aside className='w-full shrink-0 bg-sidebar px-4 py-4 md:sticky md:top-0 md:h-screen md:w-64 md:overflow-y-auto md:px-6 md:py-6'>
+		<aside className='w-full shrink-0 bg-sidebar px-4 py-4 md:sticky md:top-0 md:h-screen md:w-64 md:overflow-y-auto md:px-6 md:py-12'>
 			<div className='flex flex-col gap-4 md:gap-0'>
 				<div className='shrink-0'>
 					<div className='text-3xl font-bold md:text-4xl'>LifeOS</div>
