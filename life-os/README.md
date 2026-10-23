@@ -16,6 +16,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Database
+
+Prisma is configured for Neon PostgreSQL. Set `DATABASE_URL` to your pooled Neon connection string for the app, and `DIRECT_URL` to the direct connection string for Prisma migrations. The Prisma CLI and client prefer `.ENV` when it exists, then fall back to `.env.local` and `.env`; keep these files out of source control.
+
+Run `npm run prisma:generate` after changing `prisma/schema.prisma`; production builds generate the client automatically. After adding your first model, use `npm run prisma:migrate -- --name init` to create and apply the initial migration. Run `npm run prisma:studio` to inspect the database, and import the shared client from `lib/prisma` in server-only code.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
